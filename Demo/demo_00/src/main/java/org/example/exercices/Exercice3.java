@@ -13,6 +13,7 @@ public class Exercice3 {
             nbUser = scanner.nextInt();
         }
         System.out.println("Good Job !");
+        scanner.close();
     }
     public static void getExercice5_2() {
         int nbUser = 0;
@@ -32,7 +33,7 @@ public class Exercice3 {
             }
         }
         System.out.println("Good Job !");
-
+        scanner.close();
     }
     public static void getExercice5_3() {
         int nbDepart = 0;
@@ -46,8 +47,7 @@ public class Exercice3 {
             System.out.println(i);
             i++;
         }
-
-
+        scanner.close();
     }
     public static void getExercice5_4() {
         int nbDepart = 0;
@@ -58,7 +58,7 @@ public class Exercice3 {
         for (int i = nbDepart+1; i <= nbDepart+10; i++) {
             System.out.println(i);
         }
-
+        scanner.close();
     }
     public static void getExercice5_5() {
         int nbUser = 0;
@@ -70,6 +70,7 @@ public class Exercice3 {
         for (int i = 1; i <=10 ; i++) {
             System.out.println(+ i + " x " + nbUser + " = " + (nbUser*i));
         }
+        scanner.close();
     }
     public static void getExercice5_6() {
         int nbDepart = 0;
@@ -82,6 +83,7 @@ public class Exercice3 {
             result += i;
         }
         System.out.println("La somme des " + nbDepart + " premiers entiers est : " + result);
+        scanner.close();
     }
     public static void getExercice5_7() {
         int nbUser = 0;
@@ -98,6 +100,7 @@ public class Exercice3 {
             }
         }
         System.out.println("Le nombre max saisi est : " + nbMax);
+        scanner.close();
     }
     public static void getExercice5_7_2() {
         int nbUser = 0;
@@ -117,6 +120,7 @@ public class Exercice3 {
             }
         }
         System.out.println("Le nombre max saisi est : " + nbMax + "\n il s'agit du nombre numero : " + pos);
+        scanner.close();
     }
     public static void getExercice5_8() {
         int nbUser = 0;
@@ -129,7 +133,7 @@ public class Exercice3 {
         }
 
         System.out.println(result);
-
+        scanner.close();
     }
     public static void getExercice5_9() {
         int nbUser = -1;
@@ -152,6 +156,7 @@ public class Exercice3 {
         }
 
         System.out.println("Le nombre max saisi est : " + nbMax + "\n il s'agit du nombre numero : " + pos);
+        scanner.close();
     }
     public static void getExercice5_10() {
 
@@ -208,7 +213,7 @@ public class Exercice3 {
         }
 
         System.out.println("Le premier N tel que la somme des premiers entiers de 1 à N dépasse 100 est : " + nb);
-
+        scanner.close();
     }
 
 }
