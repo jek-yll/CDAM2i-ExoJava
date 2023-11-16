@@ -1,6 +1,4 @@
 package org.example.exercice;
-
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Exercice {
@@ -66,10 +64,13 @@ public class Exercice {
         Scanner scanner= new Scanner((System.in));
         System.out.println("Veuillez entrer un premier nom");
         String nom1 = scanner.nextLine();
+        nom1 = nom1.toLowerCase();
         System.out.println("Veuillez entrer un second nom");
         String nom2 = scanner.nextLine();
+        nom2 = nom2.toLowerCase();
         System.out.println("Veuillez entrer un troisieme nom");
         String nom3 = scanner.nextLine();
+        nom3 = nom3.toLowerCase();
 
         if (nom1.compareTo(nom2) < 0){
             if(nom2.compareTo(nom3) < 0) {
