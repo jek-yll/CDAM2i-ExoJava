@@ -126,7 +126,7 @@ public class Exercice3 {
         int nbUser = 0;
         int result = 1;
 
-        System.out.println("Saisir un nombre afin de calculer se factorielle");
+        System.out.println("Saisir un nombre afin de calculer sa factorielle");
         nbUser = scanner.nextInt();
         for (int i = 1; i <= nbUser ; i++) {
             result *= i;
