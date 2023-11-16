@@ -1,10 +1,9 @@
 package org.example;
 
-import org.example.exercice.Exercice;
-import org.example.operator.Operator;
-import org.example.readFromConsole.ReadFromConsole;
-import org.example.structure.Structure;
-import org.example.variable.Variable;
+import org.example.exercices.Exercice1;
+import org.example.exercices.Exercice2;
+import org.example.exercices.Exercice3;
+import org.example.structure.Structure2;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,6 +14,8 @@ public class Main {
         //Structure.getSwitch();
         //Structure.getIfElse();
         //ReadFromConsole.getReadWrite();
-        Exercice.getExercice3_3();
+        //Exercice1.getExercice3_3();
+        //Exercice2.getExercice3_7();
+        Exercice3.getExercice5_5();
     }
 }
