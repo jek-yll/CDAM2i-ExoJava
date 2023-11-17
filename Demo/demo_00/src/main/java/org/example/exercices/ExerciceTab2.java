@@ -75,7 +75,6 @@ public class ExerciceTab2 {
         for (int i = 0; i < tab54.length; i++) {
             tab54[i] = (int)(Math.random() * 100) + 1;
             System.out.println("Valeur dans mon tableau : " + tab54[i] + " à la position : " + (i+1));
-
         }
 
         System.out.println("\n------- Tableau après décalage -------\n");
