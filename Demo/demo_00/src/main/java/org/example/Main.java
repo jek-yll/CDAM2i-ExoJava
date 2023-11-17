@@ -4,6 +4,7 @@ import org.example.array.Array;
 import org.example.exercices.Exercice1;
 import org.example.exercices.Exercice2;
 import org.example.exercices.Exercice3;
+import org.example.exercices.ExerciceTab1;
 import org.example.structure.Structure2;
 
 import java.util.Arrays;
@@ -20,6 +21,7 @@ public class Main {
         //Exercice1.getExercice3_3();
         //Exercice2.getExercice3_7();
         //Exercice3.getExercice5_1();
-        Array.getArray();
+        //Array.getArray();
+        ExerciceTab1.exercice7();
     }
 }
