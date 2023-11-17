@@ -92,7 +92,7 @@ public class ExerciceTab1 {
 
         for (int i = 0; i < tab7.length; i++) {
             tab7[i] = (int)(Math.random() * 100) + 1;
-            System.out.println("Valeur dans mon tableau : " + tab7[i] + " a la position : " + i);
+            System.out.println("Valeur dans mon tableau : " + tab7[i] + " a la position : " + (i+1));
             if (tab7[i] > max){
                 max = tab7[i];
             }
