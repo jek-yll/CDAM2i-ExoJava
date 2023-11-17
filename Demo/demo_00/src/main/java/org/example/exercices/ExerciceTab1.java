@@ -1,6 +1,5 @@
 package org.example.exercices;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class ExerciceTab1 {
@@ -40,6 +39,7 @@ public class ExerciceTab1 {
         } else {
             System.out.println("Lentier n'est pas présent dans le tableau");
         }
+        scanner.close();
     }
 
     public static void exercice4() {
@@ -59,6 +59,8 @@ public class ExerciceTab1 {
         } else {
             System.out.println("Au moins un élément du tableau est impair");
         }
+
+        scanner.close();
     }
 
     public static void exercice5(){

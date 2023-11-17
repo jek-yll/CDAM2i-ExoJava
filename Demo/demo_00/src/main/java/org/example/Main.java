@@ -22,6 +22,6 @@ public class Main {
         //Exercice2.getExercice3_7();
         //Exercice3.getExercice5_1();
         //Array.getArray();
-        ExerciceTab1.exercice7();
+        ExerciceTab1.exercice1();
     }
 }
