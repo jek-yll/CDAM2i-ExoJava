@@ -4,7 +4,7 @@ public class Array {
 
     public static void getArray() {
         int[] tab = {2,5,6};
-        int tab2[];
+        int[] tab2;
         tab2 = new int[10];
 
         String[] tab3 = new String[5];

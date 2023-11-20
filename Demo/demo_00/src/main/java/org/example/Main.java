@@ -19,6 +19,6 @@ public class Main {
         //Exercice2.getExercice3_7();
         //Exercice3.getExercice5_1();
         //Array.getArray();
-        ExerciceTab3.exercice5_7();
+        ExerciceTab3.exercice5_8();
     }
 }

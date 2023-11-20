@@ -78,6 +78,32 @@ public class ExerciceTab3 {
     }
 
     public static void exercice5_8(){
+        //int[][] tab1 = {{1, 2, 4}, {4, 5, 6}, {7, 8, 9}};
+        //int[][] tab2 = {{1, 2}, {4, 5, 6}, {7, 8}};
+        boolean estRegulier = true;
 
+        int[] tab1 = {1,2,3,4,5,66,77};
+        int[] tab2 = {4,5,8,7,5,9,8};
+        int resultat = 0;
+
+        int[][] tab = {tab1, tab2};
+
+        for (int i = 0; i < tab.length - 1; i++) {
+            if (tab[i].length != tab[i+1].length){
+                estRegulier = false;
+                break;
+            } else {
+                for (int j = 0; j < tab[i].length; j++) {
+                    resultat = tab[i][j] + tab[i+1][j];
+                    System.out.println("resultat de la somme : " + resultat);
+                }
+            }
+        }
+
+        if (estRegulier) {
+            System.out.println("les tableaux sont réguliers");
+        } else {
+            System.out.println("les tableaux sont irrégulier");
+        }
     }
 }
