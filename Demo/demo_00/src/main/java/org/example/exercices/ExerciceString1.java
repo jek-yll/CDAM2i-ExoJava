@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class ExerciceString1 {
 
     public static void ComptageDeMot(String arg) {
-        System.out.println(arg.length());
+        System.out.printf("La chaine \"%s",arg + "\" contient " + arg.length()+ " charactères");
     }
 
     public static void ComptageOccurence(String monMot, char maLettre) {
@@ -17,8 +17,7 @@ public class ExerciceString1 {
                 occurence++;
             }
         }
-
-        System.out.println(occurence);
+        System.out.printf("il y a %d occurences du charactère %c dans le mot %s",occurence,maLettre,monMot);
     }
 
     public static void Anagramme(String mot1, String mot2) {
@@ -42,9 +41,9 @@ public class ExerciceString1 {
         }
 
         if (isAnagramme) {
-            System.out.printf(" %s et %s sont des anagrammes ", mot1, mot2);
+            System.out.printf(" %s et %s sont des anagrammes ",mot1,mot2);
         } else {
-            System.out.printf(" %s et %s ne sont pas des anagrammes ", mot1, mot2);
+            System.out.printf(" %s et %s ne sont pas des anagrammes ",mot1,mot2);
         }
     }
 
@@ -69,9 +68,9 @@ public class ExerciceString1 {
         }
 
         if (isPalindrome) {
-            System.out.printf("%s est un palidrome", mot1);
+            System.out.printf("%s est un palidrome",mot1);
         } else {
-            System.out.printf("%s n'est pas un palidrome", mot1);
+            System.out.printf("%s n'est pas un palidrome",mot1);
         }
     }
 
