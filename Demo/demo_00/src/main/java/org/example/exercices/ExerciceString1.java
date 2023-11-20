@@ -4,35 +4,35 @@ import java.util.Arrays;
 
 public class ExerciceString1 {
 
-    public static void ComptageDeMot(String arg){
+    public static void ComptageDeMot(String arg) {
         System.out.println(arg.length());
     }
 
-    public static void ComptageOccurence(String monMot, char maLettre){
+    public static void ComptageOccurence(String monMot, char maLettre) {
 
         int occurence = 0;
 
         for (int i = 0; i < monMot.length(); i++) {
-            if (monMot.toLowerCase().charAt(i) == maLettre){
-                occurence ++;
+            if (monMot.toLowerCase().charAt(i) == maLettre) {
+                occurence++;
             }
         }
 
         System.out.println(occurence);
     }
 
-    public static void Anagramme (String mot1, String mot2){
+    public static void Anagramme(String mot1, String mot2) {
 
         char[] charTab1 = mot1.toCharArray();
         char[] charTab2 = mot2.toCharArray();
         char test = ' ';
         boolean isAnagramme = true;
 
-        if (charTab1.length == charTab2.length){
+        if (charTab1.length == charTab2.length) {
             Arrays.sort(charTab1);
             Arrays.sort(charTab2);
             for (int i = 0; i < charTab1.length; i++) {
-                if (charTab1[i] != charTab2[i]){
+                if (charTab1[i] != charTab2[i]) {
                     isAnagramme = false;
                     break;
                 }
@@ -42,24 +42,24 @@ public class ExerciceString1 {
         }
 
         if (isAnagramme) {
-            System.out.printf(" %s et %s sont des anagrammes ",mot1,mot2);
+            System.out.printf(" %s et %s sont des anagrammes ", mot1, mot2);
         } else {
-            System.out.printf(" %s et %s ne sont pas des anagrammes ",mot1,mot2);
+            System.out.printf(" %s et %s ne sont pas des anagrammes ", mot1, mot2);
         }
     }
 
-    public static void Palindrome(String mot1){
+    public static void Palindrome(String mot1) {
         char[] charTab1 = mot1.toCharArray();
         char[] charTabCompare = new char[mot1.length()];
         boolean isPalindrome = true;
 
-        for (int i = 0, j = charTab1.length-1; i < charTabCompare.length; i++, j--) {
+        for (int i = 0, j = charTab1.length - 1; i < charTabCompare.length; i++, j--) {
             charTabCompare[i] = charTab1[j];
         }
 
-        if (charTab1.length == charTab1.length){
+        if (charTab1.length == charTab1.length) {
             for (int i = 0; i < charTab1.length; i++) {
-                if (charTab1[i] != charTabCompare[i]){
+                if (charTab1[i] != charTabCompare[i]) {
                     isPalindrome = false;
                     break;
                 }
@@ -79,13 +79,26 @@ public class ExerciceString1 {
 
         String display = "";
 
-        for (int i = 0; i < hauteur; i++) {
-            display += "*";
-            System.out.println(display);
-        }
-        for (int i = 0; i < hauteur; i++) {
-            display += "*";
-            System.out.println(display);
+        for (int i = 1; i < hauteur * 2 ; i++) {
+            if (i <= hauteur) {
+                System.out.println(display += "*");
+            } else {
+                System.out.println(display.substring(0, hauteur * 2 - i));
+            }
         }
     }
+
+    public static void Pyramide2(int hauteur) {
+
+        StringBuilder display = new StringBuilder();
+
+        for (int i = 1; i < hauteur * 2 ; i++) {
+            if (i <= hauteur) {
+                System.out.println(display.append("*"));
+            } else {
+                System.out.println(display.deleteCharAt( hauteur * 2 - i));
+            }
+        }
+    }
+
 }

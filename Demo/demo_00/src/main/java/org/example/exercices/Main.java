@@ -6,6 +6,6 @@ public class Main {
         //ExerciceString1.ComptageOccurence("maisonnette", 't');
         //ExerciceString1.Anagramme("guerison", "soigneur");
         //ExerciceString1.Palindrome("kayak");
-        ExerciceString1.Pyramide(4);
+        ExerciceString1.Pyramide2(6);
     }
 }
