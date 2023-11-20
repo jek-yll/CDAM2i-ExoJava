@@ -27,10 +27,10 @@ public class ExerciceTab1 {
         System.out.println("Saisir un nombre à rechercher dans un tableau");
         nbUser = scanner.nextInt();
 
-        for (int i = 0; i < tab3.length; i++) {
-            if (nbUser != tab3[i]){
-              win = true;
-              break;
+        for (int j : tab3) {
+            if (nbUser == j) {
+                win = true;
+                break;
             }
         }
 
@@ -43,7 +43,7 @@ public class ExerciceTab1 {
     }
 
     public static void exercice4() {
-        int tab4[] = new int[5];
+        int[] tab4 = new int[5];
         boolean win = true;
 
         for (int i = 0; i < tab4.length; i++) {
@@ -51,6 +51,7 @@ public class ExerciceTab1 {
             tab4[i] = scanner.nextInt();
             if (tab4[i]%2!=0){
                 win = false;
+                break;
             }
         }
 
@@ -64,7 +65,7 @@ public class ExerciceTab1 {
     }
 
     public static void exercice5(){
-        int tab5[] = new int[10];
+        int[] tab5 = new int[10];
 
         for (int i = 0; i < tab5.length; i++) {
             // (int)(Math.random() * range) + min;
@@ -74,9 +75,9 @@ public class ExerciceTab1 {
     }
 
     public static void exercice6(){
-        int tab6[] = new int[10];
-        int tab6Bis[] = new int[10];
-        int tabRes[] = new int[10];
+        int[] tab6 = new int[10];
+        int[] tab6Bis = new int[10];
+        int[] tabRes = new int[10];
 
         for (int i = 0; i < tab6.length; i++) {
             tab6[i] = (int)(Math.random() * 100) + 1;
@@ -87,7 +88,7 @@ public class ExerciceTab1 {
     }
 
     public static void exercice7(){
-        int tab7[] = new int[10];
+        int[] tab7 = new int[10];
         int max = 0;
 
         for (int i = 0; i < tab7.length; i++) {

@@ -24,7 +24,7 @@ public class ExerciceTab2 {
                 numIsFind++;
             }
         }
-
+        scanner.close();
         System.out.println("\nLa valeur : " + numSearched + " se trouve " + numIsFind + " fois dans le tableau");
     }
     public static void exercice5_2(){
@@ -33,8 +33,9 @@ public class ExerciceTab2 {
         boolean isCroissant = true;
 
         for (int i = 0; i < tab51.length-1; i++) {
-            if (tab51[i] > tab51[i+1]){
+            if (tab51[i] > tab51[i + 1]) {
                 isCroissant = false;
+                break;
             }
         }
 
@@ -45,7 +46,7 @@ public class ExerciceTab2 {
         }
     }
     public static void exercice5_3(){
-        int tab53[] = new int[15];
+        int[] tab53 = new int[15];
         int valMin = 0;
         int valMax = 0;
         int plusGrandEcart = 0;
@@ -68,8 +69,8 @@ public class ExerciceTab2 {
         System.out.println("Le plus grand écart dans notre tableau est : " + plusGrandEcart + " (" + valMax +" - " + valMin + ") ");
     }
     public static void exercice5_4(){
-        int tab54[] = new int[15];
-        int tab54Bis[] = new int[15];
+        int[] tab54 = new int[15];
+        int[] tab54Bis = new int[15];
 
         System.out.println("\n------- Tableau avant décalage -------\n");
         for (int i = 0; i < tab54.length; i++) {
