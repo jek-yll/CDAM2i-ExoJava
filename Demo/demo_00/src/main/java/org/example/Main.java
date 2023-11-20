@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.array.Array;
 import org.example.exercices.*;
+import org.example.string.ChaineCharacteres;
 import org.example.structure.Structure2;
 
 import java.util.Arrays;
@@ -19,6 +20,7 @@ public class Main {
         //Exercice2.getExercice3_7();
         //Exercice3.getExercice5_1();
         //Array.getArray();
-        ExerciceTab3.exercice5_8();
+        //ExerciceTab3.exercice5_6();
+        ChaineCharacteres.getMethodString();
     }
 }

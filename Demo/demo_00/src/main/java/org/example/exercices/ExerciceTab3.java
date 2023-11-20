@@ -4,7 +4,6 @@ public class ExerciceTab3 {
 
     public static void exercice5_5(){
         int[] tab55 = new int[10];
-        int[] tab55bis = new int[10];
         int temp = 0;
 
         System.out.println("----------- Création du tableau -----------");
@@ -14,9 +13,14 @@ public class ExerciceTab3 {
         }
 
         System.out.println("----------- Inversion du tableau -----------");
-        for (int i = 0, j = tab55.length-1; i < tab55.length; i++, j--) {
-            tab55bis[i] = tab55[j];
-            System.out.println("Valeur dans mon tableau : " + tab55bis[i] + " à la position : " + (i+1));
+        for (int i = 0, j = tab55.length-1; i < j; i++, j--) {
+            temp = tab55[i];
+            tab55[i] = tab55[j];
+            tab55[j] = temp;
+        }
+
+        for (int i = 0; i < tab55.length; i++) {
+            System.out.println("Valeur dans mon tableau : " + tab55[i] + " à la position : " + (i+1));
         }
 
     }
