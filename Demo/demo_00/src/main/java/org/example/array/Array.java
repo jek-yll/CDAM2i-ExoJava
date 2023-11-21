@@ -16,4 +16,6 @@ public class Array {
             System.out.println("Valeur dans mon tableau : " + tab[i] + " a la position : " + i );
         }
     }
+
+
 }

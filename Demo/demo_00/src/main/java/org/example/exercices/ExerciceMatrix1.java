@@ -8,7 +8,7 @@ public class ExerciceMatrix1 {
     public static void exercice1(){
 
         int[][] matrix1 = {{45,23,34,56,30},{67,75,21,52,59},{89,34,19,19,15},{1,78,90,48,42}};
-        int max = 0;
+        int max = matrix1[0][0];
 
         for (int i = 0; i < matrix1.length; i++) {
             for (int j = 0; j < matrix1[i].length; j++) {
@@ -34,7 +34,6 @@ public class ExerciceMatrix1 {
                 cpt++;
                 matrix2[i][j] = cpt;
                 somme += cpt;
-                moyenne = somme/cpt;
                 produit *= cpt;
             }
         }
@@ -45,7 +44,7 @@ public class ExerciceMatrix1 {
             }
             System.out.println();
         }
-
+        moyenne = somme/cpt;
         System.out.printf("\nsomme de la matrice : %d\nproduit total: %d\nmoyenne: %d",somme,produit,moyenne);
     }
 
