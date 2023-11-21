@@ -56,15 +56,11 @@ public class ExerciceString1 {
             charTabCompare[i] = charTab1[j];
         }
 
-        if (charTab1.length == charTab1.length) {
-            for (int i = 0; i < charTab1.length; i++) {
-                if (charTab1[i] != charTabCompare[i]) {
-                    isPalindrome = false;
-                    break;
-                }
+        for (int i = 0; i < charTab1.length; i++) {
+            if (charTab1[i] != charTabCompare[i]) {
+                isPalindrome = false;
+                break;
             }
-        } else {
-            isPalindrome = false;
         }
 
         if (isPalindrome) {
