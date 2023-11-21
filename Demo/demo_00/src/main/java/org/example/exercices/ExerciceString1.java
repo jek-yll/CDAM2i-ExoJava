@@ -78,7 +78,7 @@ public class ExerciceString1 {
             if (i <= hauteur) {
                 System.out.println(display += "*");
             } else {
-                System.out.println(display.substring(0, hauteur * 2 - i));
+                System.out.println(display.substring(0, hauteur *2 - i));
             }
         }
     }
