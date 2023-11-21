@@ -68,9 +68,9 @@ public class ExerciceString1 {
         }
 
         if (isPalindrome) {
-            System.out.printf("%s est un palidrome",mot1);
+            System.out.printf("%s est un palindrome",mot1);
         } else {
-            System.out.printf("%s n'est pas un palidrome",mot1);
+            System.out.printf("%s n'est pas un palindrome",mot1);
         }
     }
 
