@@ -4,11 +4,11 @@ import java.util.Arrays;
 
 public class ExerciceString1 {
 
-    public static void ComptageDeMot(String arg) {
+    public static void comptageDeMot(String arg) {
         System.out.printf("La chaine \"%s",arg + "\" contient " + arg.length()+ " charactères");
     }
 
-    public static void ComptageOccurence(String monMot, char maLettre) {
+    public static void comptageOccurence(String monMot, char maLettre) {
 
         int occurence = 0;
 
@@ -20,7 +20,7 @@ public class ExerciceString1 {
         System.out.printf("il y a %d occurences du charactère %c dans le mot %s",occurence,maLettre,monMot);
     }
 
-    public static void Anagramme(String mot1, String mot2) {
+    public static void anagramme(String mot1, String mot2) {
 
         char[] charTab1 = mot1.toCharArray();
         char[] charTab2 = mot2.toCharArray();
@@ -47,7 +47,7 @@ public class ExerciceString1 {
         }
     }
 
-    public static void Palindrome(String mot1) {
+    public static void palindrome(String mot1) {
         char[] charTab1 = mot1.toCharArray();
         char[] charTabCompare = new char[mot1.length()];
         boolean isPalindrome = true;
@@ -70,7 +70,7 @@ public class ExerciceString1 {
         }
     }
 
-    public static void Pyramide(int hauteur) {
+    public static void pyramide(int hauteur) {
 
         String display = "";
 
@@ -83,7 +83,7 @@ public class ExerciceString1 {
         }
     }
 
-    public static void Pyramide2(int hauteur) {
+    public static void pyramide2(int hauteur) {
 
         StringBuilder display = new StringBuilder();
 
