@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.array.Array;
+import org.example.array.ArrayMatrix;
 import org.example.exercices.*;
 import org.example.string.ChaineCharacteres;
 import org.example.structure.Structure2;
@@ -21,6 +22,7 @@ public class Main {
         //Exercice3.getExercice5_1();
         //Array.getArray();
         //ExerciceTab3.exercice5_6();
-        ChaineCharacteres.getMethodString();
+        //ChaineCharacteres.getMethodString();
+        ArrayMatrix.getMatrix2();
     }
 }

@@ -6,6 +6,7 @@ public class Main {
         //ExerciceString1.comptageOccurence("maisonnette", 't');
         //ExerciceString1.anagramme("guerison", "soigneur");
         //ExerciceString1.palindrome("kayak");
-        ExerciceString1.pyramide(7);
+        //ExerciceString1.pyramide(7);
+        ExerciceMatrix1.ventes();
     }
 }
