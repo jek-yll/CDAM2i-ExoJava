@@ -2,7 +2,7 @@ package org.example.exercices.pooCompte;
 
 public class CompteSimple extends Compte{
 
-    private Integer decouvert;
+    protected Integer decouvert;
     public CompteSimple(Integer solde, Integer decouvert) {
         super(solde);
         this.decouvert = decouvert;
