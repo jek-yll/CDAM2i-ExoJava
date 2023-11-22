@@ -98,6 +98,22 @@ public class ExerciceFunction1 {
         return newTab;
     }
 
+    public static void exercice6(){
+        System.out.println("Saisir a : ");
+        int a = scanner.nextInt();
+        System.out.println("Saisir b : ");
+        int b = scanner.nextInt();
+        int pgcd = pgcd(a, b);
+        System.out.println(pgcd);
+    }
+
+    public static int pgcd(int a, int b){
+        if (b == 0) {
+            return a;
+        } else {
+            return pgcd(b, a % b);
+        }
+    }
 
     private static void afficheTab(int[][] tableau) {
         for (int i = 0; i < tableau.length; i++) {

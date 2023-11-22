@@ -7,6 +7,6 @@ public class Main {
         //ExerciceString1.anagramme("guerison", "soigneur");
         //ExerciceString1.palindrome("kayak");
         //ExerciceString1.pyramide(7);
-        ExerciceFunction1.exercice4();
+        ExerciceFunction1.exercice6();
     }
 }
