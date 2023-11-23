@@ -2,8 +2,8 @@ package org.example.exercices.pooHouse;
 
 public class House {
 
-    private int surface;
-    private Door door;
+    protected int surface;
+    protected Door door;
 
     public House(int surface, Door door) {
         this.surface = surface;
@@ -27,6 +27,6 @@ public class House {
     }
 
     public void display(){
-        System.out.printf("J'ai une maison, d'une surface est de /d m² \n",getSurface());
+        System.out.printf("J'ai une maison, d'une surface est de /d m² \n",surface);
     }
 }

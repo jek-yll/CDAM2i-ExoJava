@@ -27,7 +27,7 @@ public class Person {
     }
 
     public void display(){
-        System.out.printf("Je m'appelle %s\n", getName());
+        System.out.printf("Je m'appelle %s\n", name);
         house.display();
         house.getDoor().display();
     }

@@ -16,16 +16,17 @@ public class CompteSimple extends Compte{
         this.decouvert = decouvert;
     }
 
+    @Override
     public float retrait (float montant){
 
-        Float operation = solde - montant;
+        float operation = solde - montant;
 
-        if (operation >= decouvert ){
+        if (operation > decouvert ){
         setSolde(operation);
         return solde;
-        } else {
-            System.out.println("Retrait impossible");
-            return solde;
         }
+        System.out.println("Retrait impossible");
+        return solde;
+
     }
 }

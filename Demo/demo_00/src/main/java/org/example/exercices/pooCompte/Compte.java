@@ -1,13 +1,11 @@
 package org.example.exercices.pooCompte;
 
 public abstract class Compte {
-
     private static Integer counter = 0;
 
     {
         counter++;
     }
-
     protected Integer code;
     protected float solde;
 

@@ -2,7 +2,7 @@ package org.example.exercices.pooPerson;
 
 public class Person {
 
-    private int age;
+    protected int age;
 
     public Person() {
     }

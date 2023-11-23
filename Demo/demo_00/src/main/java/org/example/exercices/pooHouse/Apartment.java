@@ -7,6 +7,6 @@ public class Apartment extends House{
     }
 
     public void display(){
-        System.out.printf("J'ai un appartement, d'une surface de %d m² \n",getSurface());
+        System.out.printf("J'ai un appartement, d'une surface de %d m² \n",surface);
     }
 }
