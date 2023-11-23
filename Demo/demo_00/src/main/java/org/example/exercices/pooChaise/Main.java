@@ -1,9 +1,8 @@
-package org.example;
+package org.example.exercices.pooChaise;
 
 public class Main {
 
     public static void main(String[] args) {
-
 
         Chaises chaise1 = new Chaises(4,"Bleu", "Bois");
         Chaises chaise2 = new Chaises(5, "vert", "brique");

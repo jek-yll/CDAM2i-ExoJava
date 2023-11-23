@@ -1,4 +1,4 @@
-package org.example;
+package org.example.exercices.pooChaise;
 
 public class Chaises {
 
