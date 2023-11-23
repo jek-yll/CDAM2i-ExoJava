@@ -38,4 +38,10 @@ public class Chaises {
     public void setMateriaux(String materiaux) {
         this.materiaux = materiaux;
     }
+
+    public void display(){
+        System.out.println("-------------------------- Affichage d'un nouvel objet --------------------------\n");
+        System.out.printf("Je suis une Chaise, avec %d pieds en %s et de couleur %s",nbPieds,materiaux,couleur );
+        System.out.println("\n\n---------------------------------------------------------------------------------");
+    }
 }

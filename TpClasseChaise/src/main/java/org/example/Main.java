@@ -6,9 +6,12 @@ public class Main {
 
 
         Chaises chaise1 = new Chaises(4,"Bleu", "Bois");
+        Chaises chaise2 = new Chaises(5, "vert", "brique");
+        Chaises chaise3 = new Chaises(1, "marron", "carton");
 
-        System.out.println("-------------------------- Affichage d'un nouvel objet --------------------------\n");
-        System.out.printf("Je suis une Chaise, avec %d pieds en %s et de couleur %s",chaise1.getNbPieds(),chaise1.getMateriaux(),chaise1.getCouleur() );
-        System.out.println("\n\n---------------------------------------------------------------------------------");
+        chaise1.display();
+        chaise2.display();
+        chaise3.display();
+
     }
 }
