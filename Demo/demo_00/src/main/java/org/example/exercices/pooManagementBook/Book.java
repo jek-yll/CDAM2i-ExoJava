@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Book {
 
-    private static Integer count;
+    private static Integer count = 0;
 
     private int id;
     private String name;

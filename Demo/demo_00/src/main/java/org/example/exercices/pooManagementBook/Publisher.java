@@ -7,12 +7,36 @@ public class Publisher  {
     private int id;
     private String plublisherName;
 
-    public Publisher(String plublisherName) {
-        this.id = count++;
+    public Publisher(int id, String plublisherName) {
+        this.id = id;
         this.plublisherName = plublisherName;
     }
 
     public Publisher() {
+    }
+
+    public static Integer getCount() {
+        return count;
+    }
+
+    public static void setCount(Integer count) {
+        Publisher.count = count;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPlublisherName() {
+        return plublisherName;
+    }
+
+    public void setPlublisherName(String plublisherName) {
+        this.plublisherName = plublisherName;
     }
 
     @Override

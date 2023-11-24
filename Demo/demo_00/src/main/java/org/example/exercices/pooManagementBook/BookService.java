@@ -5,26 +5,25 @@ import java.util.stream.Collectors;
 
 public class BookService {
 
-    public List<Book> filterBooksByAuthor(Author author, List<Book> books){
-
+    public List<Book> filterBooksByAuthorId(int authorId, List<Book> books) {
         List<Book> filteredBooks = books.stream()
-                .filter(book -> book.getAuthors().equals(author))
+                .filter(book -> book.getAuthors().stream().anyMatch(author -> author.getId() == authorId))
                 .collect(Collectors.toList());
 
-        return books;
+        return filteredBooks;
     }
 
-    public List<Book> filterBooksByPublisher(Publisher publisher, List<Book> books){
+    public List<Book> filterBooksByPublisherId(int publisherId, List<Book> books){
         List<Book> filteredBooks = books.stream()
-                .filter(book -> book.getPublisher().equals(publisher))
+                .filter(book -> book.getPublisher().getId() == publisherId)
                 .collect(Collectors.toList());
-        return books;
+        return filteredBooks;
     }
 
     public List<Book> filterBooksAfterSpecifiedYear(Integer yearFromInclusively, List<Book> books){
         List<Book> filteredBooks = books.stream()
                 .filter(book -> book.getPublishingAnnee().equals(yearFromInclusively))
                 .collect(Collectors.toList());
-        return books;
+        return filteredBooks;
     }
 }
