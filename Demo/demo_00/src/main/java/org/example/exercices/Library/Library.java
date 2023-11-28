@@ -79,12 +79,22 @@ public class Library {
 
         Book bookToBorrow = findBookById(idBook);
 
-        if (bookToBorrow.statut.equals(LoanStatut.FREE)){
+        if (loans.isEmpty()){
             Loan newLoan = new Loan(bookToBorrow, person, LocalDate.now(), LocalDate.now().plusWeeks(2));
-            bookToBorrow.setStatut(LoanStatut.BORROWED);
             loans.add(newLoan);
+            bookToBorrow.setStatut(LoanStatut.BORROWED);
             return true;
-        } return false;
+        } else {
+            for ( Loan l : loans) {
+                if (!l.getBook().id.equals(idBook) || l.getBook().id.equals(idBook) && l.getEndDate().isBefore(LocalDate.now())){
+                    Loan newLoan = new Loan(bookToBorrow, person, LocalDate.now(), LocalDate.now().plusWeeks(2));
+                    loans.add(newLoan);
+                    bookToBorrow.setStatut(LoanStatut.BORROWED);
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public boolean returnBook (Integer idBook){
