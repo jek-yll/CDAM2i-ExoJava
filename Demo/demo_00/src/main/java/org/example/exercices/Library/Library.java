@@ -30,8 +30,7 @@ public class Library {
     }
 
     public boolean addBook(Book book){
-        books.add(book);
-        return true;
+        return books.add(book);
     }
 
     public boolean removeBook(Integer idBook){
@@ -61,7 +60,8 @@ public class Library {
             if (b.title.equals(title)){
                 foundBooks.add(b);
             }
-        } return foundBooks;
+        }
+        return foundBooks;
     }
 
     public ArrayList<Book> findBookByAuthor (String author){
@@ -72,7 +72,8 @@ public class Library {
             if (b.author.equals(author)){
                 foundBooks.add(b);
             }
-        } return foundBooks;
+        }
+        return foundBooks;
     }
 
     public boolean borrowABook (Integer idBook, Person person){
@@ -86,7 +87,7 @@ public class Library {
             return true;
         } else {
             for ( Loan l : loans) {
-                if (!l.getBook().id.equals(idBook) || l.getBook().id.equals(idBook) && l.getEndDate().isBefore(LocalDate.now())){
+                if (!l.getBook().id.equals(idBook) || (l.getBook().id.equals(idBook) && l.getEndDate().isBefore(LocalDate.now()))){
                     Loan newLoan = new Loan(bookToBorrow, person, LocalDate.now(), LocalDate.now().plusWeeks(2));
                     loans.add(newLoan);
                     bookToBorrow.setStatut(LoanStatut.BORROWED);
@@ -97,6 +98,7 @@ public class Library {
         return false;
     }
 
+    //todo gérer la date de retour
     public boolean returnBook (Integer idBook){
         Book bookToReturn = findBookById(idBook);
         bookToReturn.setStatut(LoanStatut.FREE);

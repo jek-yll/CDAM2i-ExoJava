@@ -28,7 +28,7 @@ public class Demo {
 
         System.out.println("Emprunt du livre id 2 par la person person2");
         System.out.println(book2);
-        System.out.println(library.borrowABook(2,person));
+        System.out.println(library.borrowABook(2,person2));
         System.out.println(book2);
 
         System.out.println("Retour du livre id 2 : par la person person");
