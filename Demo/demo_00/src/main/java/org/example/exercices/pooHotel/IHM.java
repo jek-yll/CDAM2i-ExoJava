@@ -56,7 +56,6 @@ public class IHM {
                     break;
                 default:
                     System.out.println("Veuillez réessayer");
-
         }
     }
 
