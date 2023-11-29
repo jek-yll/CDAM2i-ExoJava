@@ -36,8 +36,6 @@ public class PurchaseLine {
 
     public String DisplayPurchaseLine() {
 
-        //if (article.getClass())
-
         return quantity.toString() +
                 " - " + article.getReference().toString()+
                 " - " + article.getLabel() +
