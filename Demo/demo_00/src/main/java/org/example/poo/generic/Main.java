@@ -1,6 +1,6 @@
 package org.example.poo.generic;
 
-import org.example.model.Maison;
+
 import org.example.poo.Phone;
 import org.example.poo.datastructure.ElectricCar;
 
