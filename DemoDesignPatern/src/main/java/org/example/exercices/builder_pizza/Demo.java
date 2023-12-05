@@ -1,4 +1,4 @@
-package org.example.exercices.pizza;
+package org.example.exercices.builder_pizza;
 
 public class Demo {
     public static void main(String[] args) {

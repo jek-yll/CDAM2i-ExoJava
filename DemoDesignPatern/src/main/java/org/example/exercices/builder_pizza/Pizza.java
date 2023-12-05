@@ -1,20 +1,18 @@
-package org.example.exercices.pizza;
-
-import org.example.demo_builder.Voiture;
+package org.example.exercices.builder_pizza;
 
 import java.util.ArrayList;
 
 public class Pizza {
     private String taille;
     private String pate;
-    private ArrayList<String> fromages;
+    private String fromage;
     private ArrayList<String> garnitures;
     private String sauce;
 
     private Pizza(Builder builder){
         this.taille = builder.taille;
         this.pate = builder.pate;
-        this.fromages = builder.fromages;
+        this.fromage = builder.fromage;
         this.garnitures = builder.garnitures;
         this.sauce = builder.sauce;
     }
@@ -24,7 +22,7 @@ public class Pizza {
         return "Pizza{" +
                 "taille='" + taille + '\'' +
                 ", pate='" + pate + '\'' +
-                ", fromage='" + fromages + '\'' +
+                ", fromage='" + fromage + '\'' +
                 ", garnitures=" + garnitures +
                 ", sauce='" + sauce + '\'' +
                 '}';
@@ -33,7 +31,7 @@ public class Pizza {
     public static class Builder{
         private String taille;
         private String pate;
-        private ArrayList<String> fromages = new ArrayList<>();
+        private String fromage ;
         private ArrayList<String> garnitures = new ArrayList<>();
         private String sauce;
         public Builder taille(String taille){
@@ -45,7 +43,10 @@ public class Pizza {
             return this;
         }
         public Builder fromage(String fromage){
-            this.fromages.add(fromage);
+            if (this.fromage != null){
+                throw new RuntimeException("Un fromage a deja etait choisi");
+            }
+            this.fromage = fromage;
             return this;
         }
         public Builder garnitures(String garniture){
