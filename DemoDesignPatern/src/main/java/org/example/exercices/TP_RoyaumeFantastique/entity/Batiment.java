@@ -20,7 +20,7 @@ public class Batiment {
         this.batimentFactory = batimentFactory;
         style = this.batimentFactory.createStyle();
         taille = this.batimentFactory.createTaille();
-        fonctionnalites = this.batimentFactory.createFonctionnalites();
+        fonctionnalites = (List<Fonctionnalite>) this.batimentFactory.createFonctionnalites();
 
     }
 

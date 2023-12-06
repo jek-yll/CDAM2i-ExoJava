@@ -9,7 +9,6 @@ import org.example.exercices.TP_RoyaumeFantastique.entity.impl.CaserneTaille;
 import org.example.exercices.TP_RoyaumeFantastique.factory.BatimentFactory;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CaserneFactory extends BatimentFactory {
     @Override
@@ -23,9 +22,8 @@ public class CaserneFactory extends BatimentFactory {
     }
 
     @Override
-    public List<Fonctionnalite> createFonctionnalites() {
-        return new ArrayList<Fonctionnalite>() {
-        };
+    public ArrayList<CaserneFonctionnalite> createFonctionnalites() {
+        return new ArrayList<CaserneFonctionnalite>();
     }
 
 }
