@@ -14,19 +14,16 @@ public class CastleBuilder extends BuildingBuilder {
         this.name = name;
         return this;
     }
-
     @Override
     public BuildingBuilder style(String style) {
         this.style = style;
         return this;
     }
-
     @Override
     public BuildingBuilder size(int size) {
         this.size = size;
         return this;
     }
-
     @Override
     public Building build() {
         return new Castle(this);
