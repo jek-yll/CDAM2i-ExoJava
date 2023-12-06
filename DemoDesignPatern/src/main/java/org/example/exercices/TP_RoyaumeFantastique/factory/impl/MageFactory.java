@@ -16,8 +16,8 @@ public class MageFactory extends PersonnageFactory {
     }
 
     @Override
-    public Armement createArmement() {
-        return new MageArmement() ;
+    public MageArmement createArmement() {
+        return new MageArmement();
     }
 
     @Override

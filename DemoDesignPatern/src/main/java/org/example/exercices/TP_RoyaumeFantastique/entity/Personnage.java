@@ -20,7 +20,14 @@ public class Personnage {
         armement = this.personnageFactory.createArmement();
         attributs = (List<Attribut>) this.personnageFactory.createAttribut();
         competences = (List<Competence>) this.personnageFactory.createCompetence();
+    }
 
+    public void setArmement(Armement armement){
+        this.armement = armement;
+    }
+
+    public void addAttributs(Attribut attribut){
+        this.attributs.add(attribut);
     }
 
 }

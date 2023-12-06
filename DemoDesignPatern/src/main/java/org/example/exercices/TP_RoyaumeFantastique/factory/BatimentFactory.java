@@ -7,7 +7,6 @@ import org.example.exercices.TP_RoyaumeFantastique.entity.Taille;
 import java.util.ArrayList;
 
 public abstract class BatimentFactory {
-
     public abstract Style createStyle();
     public abstract Taille createTaille();
     public abstract ArrayList<? extends Fonctionnalite> createFonctionnalites();

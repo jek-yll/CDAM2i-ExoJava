@@ -8,11 +8,12 @@ public class Storage {
 
     private static Storage instance = null;
     private static Object lock = new Object();
+    private List<Royaume> royaumeList;
 
-    private List<Royaume> royaumes;
+    public List<Royaume> getRoyaumeList() {return royaumeList;}
 
     private Storage() {
-        royaumes = new ArrayList<>();
+        royaumeList = new ArrayList<>();
     }
 
     public static Storage getInstance(){

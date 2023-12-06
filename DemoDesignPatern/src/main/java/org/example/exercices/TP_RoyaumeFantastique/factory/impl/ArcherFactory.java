@@ -12,12 +12,10 @@ public class ArcherFactory extends PersonnageFactory {
     public ArrayList<ArcherAttribut> createAttribut() {
         return new ArrayList<ArcherAttribut>();
     }
-
     @Override
     public ArcherArmement createArmement() {
         return new ArcherArmement();
     }
-
     @Override
     public ArrayList<ArcherCompetence> createCompetence() {
         return new ArrayList<ArcherCompetence>();
