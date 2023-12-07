@@ -12,6 +12,9 @@ public class Main {
         product.registerObserver(stockManager);
 
         product.newStock(41);
+
+        product.removeObserver(supplier);
+        product.newStock(40);
     }
 
 }
