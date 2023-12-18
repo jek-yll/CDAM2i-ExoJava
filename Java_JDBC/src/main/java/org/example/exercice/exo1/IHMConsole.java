@@ -14,6 +14,7 @@ public class IHMConsole {
                     "2 - Afficher les étudiants d'une classe",
                     "3 - Supprimer un étudiant",
                     "4 - Ajouter un étudiant",
+                    "5 - Rechercher un étudiant (nom, prenom)",
                     "0 - Fin"
             };
 
@@ -39,6 +40,10 @@ public class IHMConsole {
                 }
                 case 4 -> {
                     addEtudiant();
+                    menu();
+                }
+                case 5 -> {
+                    getOneEtudiantByName();
                     menu();
                 }
                 case 0 -> {
@@ -77,5 +82,11 @@ public class IHMConsole {
             System.out.println("Saisir l'id de l'étudiant a supprimer : ");
             int id = sc.nextInt();
             EtudiantDb.deleteEtudiant(id);
+        }
+
+        private static void getOneEtudiantByName(){
+            System.out.println("Saisir le nom ou le prenom de l'étudiant recherché");
+            String nom = sc.nextLine();
+            EtudiantDb.getOneEtudiantByName(nom);
         }
 }

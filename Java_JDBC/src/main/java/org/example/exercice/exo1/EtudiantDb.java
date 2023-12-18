@@ -122,10 +122,57 @@ public class  EtudiantDb {
 
             PreparedStatement preparedStatement = connection.prepareStatement(req);
             preparedStatement.setInt(1, id);
+
+            int nbRow = preparedStatement.executeUpdate();
             preparedStatement.execute();
+
+            if (nbRow > 0){
+                System.out.println("étudiant "+ id +" supprimé avec succès");
+            } else {
+                System.out.println("erreur lors de la suppression de l'étudiant n°=" + id);
+            }
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
+        }
+    }
+
+    public static void getOneEtudiantByName (String nom){
+        Connection connection = null;
+
+        try {
+            connection = ConnectDb.getMySQLConnection();
+
+            String req = "SELECT * FROM etudiant WHERE nom = ? OR prenom = ?;";
+
+            PreparedStatement preparedStatement = connection.prepareStatement(req, Statement.RETURN_GENERATED_KEYS);
+            preparedStatement.setString(1, nom);
+            preparedStatement.setString(2, nom);
+
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()){
+                System.out.println(resultSet.getInt("id") +") "
+                        + resultSet.getString("nom")+", "
+                        + resultSet.getString("prenom")+", "
+                        + resultSet.getInt("num_classe")+", "
+                        + resultSet.getDate("date_diplome")
+                );
+            }
+
+            preparedStatement.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } finally {
+            // Fermer la connexion à la bdd
+            if (connection != null){
+                try {
+                    connection.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
