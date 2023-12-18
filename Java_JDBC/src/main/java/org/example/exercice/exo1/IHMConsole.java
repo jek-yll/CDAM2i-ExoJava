@@ -50,7 +50,6 @@ public class IHMConsole {
                     break;
                 }
             }
-
         }
 
         private static void getAllEtudiant(){
