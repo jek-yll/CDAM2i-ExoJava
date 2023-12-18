@@ -143,11 +143,11 @@ public class  EtudiantDb {
         try {
             connection = ConnectDb.getMySQLConnection();
 
-            String req = "SELECT * FROM etudiant WHERE nom = ? OR prenom = ?;";
+            String req = "SELECT * FROM etudiant WHERE nom LIKE ? OR prenom LIKE ?;";
 
             PreparedStatement preparedStatement = connection.prepareStatement(req, Statement.RETURN_GENERATED_KEYS);
-            preparedStatement.setString(1, nom);
-            preparedStatement.setString(2, nom);
+            preparedStatement.setString(1,  "%" + nom + "%" );
+            preparedStatement.setString(2, "%" + nom + "%");
 
             ResultSet resultSet = preparedStatement.executeQuery();
 
