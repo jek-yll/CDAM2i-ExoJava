@@ -6,10 +6,10 @@ import static java.lang.Integer.parseInt;
 
 public class IHMConsole {
 
-        private static Scanner sc = new Scanner(System.in);
+        private static final Scanner sc = new Scanner(System.in);
 
         static void menu() {
-            String propositions[] = {
+            String[] propositions = {
                     "1 - Afficher tous les étudiant",
                     "2 - Afficher les étudiants d'une classe",
                     "3 - Supprimer un étudiant",
@@ -43,11 +43,14 @@ public class IHMConsole {
                     menu();
                 }
                 case 5 -> {
-                    getOneEtudiantByName();
+                    getEtudiantByName();
                     menu();
                 }
                 case 0 -> {
-                    break;
+                }
+                default -> {
+                    System.out.println("commande non répertorié");
+                    menu();
                 }
             }
         }
@@ -83,7 +86,7 @@ public class IHMConsole {
             EtudiantDb.deleteEtudiant(id);
         }
 
-        private static void getOneEtudiantByName(){
+        private static void getEtudiantByName(){
             System.out.println("Saisir le nom ou le prenom de l'étudiant recherché");
             String nom = sc.nextLine();
             EtudiantDb.getOneEtudiantByName(nom);
