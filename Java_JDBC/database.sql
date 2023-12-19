@@ -1,7 +1,7 @@
-CREATE DATABASE demo_jdbc;
+CREATE DATABASE IF NOT EXISTS demo_jdbc;
 USE demo_jdbc;
 
-CREATE TABLE personne 
+CREATE TABLE person 
 (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(50),
