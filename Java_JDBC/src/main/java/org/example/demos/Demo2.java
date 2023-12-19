@@ -1,6 +1,6 @@
-package org.example;
+package org.example.demos;
 
-import org.example.utils.ConnectionUtils;
+import org.example.demos.utils.ConnectionUtils;
 
 
 import java.sql.*;

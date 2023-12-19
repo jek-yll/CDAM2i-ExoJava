@@ -1,4 +1,4 @@
-package org.example;
+package org.example.demos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -21,7 +21,6 @@ public class Main {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
-
         // Meilleur pratique : mettre la connection dans une classe à part.
     }
 }
