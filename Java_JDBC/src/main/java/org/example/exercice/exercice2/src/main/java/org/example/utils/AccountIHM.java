@@ -22,8 +22,8 @@ public class AccountIHM {
                 "1 - Nouveau client et compte",
                 "2 - Depot",
                 "3 - Retrait",
-                "4 - Historique de compte",
-                "5 - Afficher mes comptes",
+                "4 - Afficher mes comptes",
+                "5 - Historique de compte",
                 "0 - Fin"
         };
 
@@ -40,22 +40,21 @@ public class AccountIHM {
                 menu();
             }
             case 2 -> {
-                deposit();
+                operation(Status.DEPOSIT);
                 menu();
             }
             case 3 -> {
-                withdrawal();
+                operation(Status.WITHDRAWAL);
                 menu();
             }
             case 4 -> {
-                history();
-                menu();
-            }
-            case 5 -> {
                 allAccount();
                 menu();
             }
-
+            case 5 -> {
+                history();
+                menu();
+            }
             case 0 -> {
             }
             default -> {
@@ -75,32 +74,27 @@ public class AccountIHM {
         customerService.createCustomer(prenom, nom, telephone);
     }
 
-    private static void deposit(){
+    private static void operation(Status status){
         System.out.println("Veuillez saisir votre numéro de compte");
         int accountId = sc.nextInt();
         sc.nextLine();
 
-        System.out.println("Veuillez saisir le montant à déposer");
+        if (status == Status.DEPOSIT){
+            System.out.println("Veuillez saisir le montant à déposer");
+        } else if (status == Status.WITHDRAWAL) {
+            System.out.println("Veuillez saisir le montant à retirer");
+        }
+
         int amount = sc.nextInt();
         sc.nextLine();
-
         BankAccount bankAccount = customerService.getAccount(accountId);
 
-        customerService.updateBalance(bankAccount, amount, Status.DEPOSIT);
-    }
+        if (status == Status.DEPOSIT){
+            customerService.updateBalance(bankAccount, amount, Status.DEPOSIT);
+        } else if (status == Status.WITHDRAWAL) {
+            customerService.updateBalance(bankAccount, amount, Status.WITHDRAWAL);
+        }
 
-    private static void withdrawal(){
-        System.out.println("Veuillez saisir votre numéro de compte");
-        int accountId = sc.nextInt();
-        sc.nextLine();
-
-        System.out.println("Veuillez saisir le montant à retirer");
-        int amount = sc.nextInt();
-        sc.nextLine();
-
-        BankAccount bankAccount = customerService.getAccount(accountId);
-
-        customerService.updateBalance(bankAccount, amount, Status.WITHDRAWAL);
     }
 
     private static void history(){
