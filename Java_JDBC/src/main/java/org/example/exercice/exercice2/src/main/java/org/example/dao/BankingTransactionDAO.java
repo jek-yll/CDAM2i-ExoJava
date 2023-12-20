@@ -1,6 +1,7 @@
 package org.example.dao;
 
 import org.example.models.BankingTransaction;
+import org.example.models.Status;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -15,10 +16,11 @@ public class BankingTransactionDAO extends BaseDAO<BankingTransaction>{
 
     @Override
     public boolean save(BankingTransaction element) throws SQLException {
-        request = "INSERT INTO banking_transaction (amount, status) VALUES (?,?);";
+        request = "INSERT INTO banking_transaction (amount, status, account_id) VALUES (?,?,?);";
         statement = _connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
         statement.setInt(1, element.getAmount());
         statement.setString(2, element.getStatus().toString());
+        statement.setInt(3, element.getAccount_id());
 
         int nbRows = statement.executeUpdate();
         resultSet = statement.getGeneratedKeys();
@@ -46,7 +48,7 @@ public class BankingTransactionDAO extends BaseDAO<BankingTransaction>{
 
     public List<BankingTransaction> getAllTransaction(int accountNumber) throws SQLException {
         List<BankingTransaction> result = new ArrayList<>();
-        request = "SELECT transaction_number, amount FROM banking_transaction bt " +
+        request = "SELECT transaction_number, amount, status, account_id FROM banking_transaction bt " +
                 "INNER JOIN bank_account ba ON ba.account_number = bt.account_id WHERE ba.account_number = ?; ";
         statement = _connection.prepareStatement(request);
         statement.setInt(1, accountNumber);
@@ -56,6 +58,9 @@ public class BankingTransactionDAO extends BaseDAO<BankingTransaction>{
             BankingTransaction transaction = new BankingTransaction();
             transaction.setTransactionNumber(resultSet.getInt("transaction_number"));
             transaction.setAmount(resultSet.getInt("amount"));
+            transaction.setStatus(Status.valueOf(resultSet.getString("status")));
+            transaction.setAccount_id(resultSet.getInt("account_id"));
+
             result.add(transaction);
         }
         return result;

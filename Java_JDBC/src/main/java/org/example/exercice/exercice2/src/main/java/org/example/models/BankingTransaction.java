@@ -12,5 +12,6 @@ public class BankingTransaction {
     private int transactionNumber;
     private int amount;
     private Status status;
+    private int account_id;
 
 }

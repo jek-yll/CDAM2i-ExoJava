@@ -4,12 +4,13 @@ import org.example.dao.BankAccountDAO;
 import org.example.dao.BankingTransactionDAO;
 import org.example.dao.CustomerDAO;
 import org.example.models.BankAccount;
+import org.example.models.BankingTransaction;
 import org.example.models.Customer;
+import org.example.models.Status;
 import org.example.utils.DatabaseManager;
 
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerService {
@@ -54,15 +55,42 @@ public class CustomerService {
         return false;
     }
 
-    public boolean update(int accountId, int amount){
+    public boolean updateBalance(BankAccount bankAccount, int amount, Status status){
 
         try {
-            bankAccountDAO.update(bankAccountDAO.get(accountId));
+            bankAccountDAO.updateBalance(bankAccount, amount, status);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
+        BankingTransaction bankingTransaction = new BankingTransaction();
+        bankingTransaction.setAmount(amount);
+        bankingTransaction.setStatus(status);
+        bankingTransaction.setAccount_id(bankAccount.getAccountNumber());
+
+        try {
+            bankingTransactionDAO.save(bankingTransaction);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
         return false;
+    }
+
+    public BankAccount getAccount(int accountId){
+        try {
+            return bankAccountDAO.get(accountId);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public List<BankingTransaction> getAllTransactions(int accountNumber){
+        try {
+            return bankingTransactionDAO.getAllTransaction(accountNumber);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public List<BankAccount> getAllAccount(int customerId){

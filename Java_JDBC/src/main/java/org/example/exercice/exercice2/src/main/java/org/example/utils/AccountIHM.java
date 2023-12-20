@@ -1,8 +1,11 @@
 package org.example.utils;
 
 import org.example.models.BankAccount;
+import org.example.models.BankingTransaction;
+import org.example.models.Status;
 import org.example.services.CustomerService;
 
+import java.util.List;
 import java.util.Scanner;
 
 import static java.lang.Integer.parseInt;
@@ -19,7 +22,7 @@ public class AccountIHM {
                 "1 - Nouveau client et compte",
                 "2 - Depot",
                 "3 - Retrait",
-                "4 - Mes comptes",
+                "4 - Historique de compte",
                 "0 - Fin"
         };
 
@@ -70,25 +73,42 @@ public class AccountIHM {
         //TODO: vérifier que le compte selectionné appartient au client
 
         System.out.println("Veuillez saisir votre numéro de compte");
-        int account = sc.nextInt();
+        int accountId = sc.nextInt();
+        sc.nextLine();
+
+        System.out.println("Veuillez saisir le montant à déposer");
+        int amount = sc.nextInt();
+        sc.nextLine();
+
+        BankAccount bankAccount = customerService.getAccount(accountId);
+
+        customerService.updateBalance(bankAccount, amount, Status.DEPOSIT);
+    }
+
+    private static void withdrawal(){
+        System.out.println("Veuillez saisir votre numéro de compte");
+        int accountId = sc.nextInt();
         sc.nextLine();
 
         System.out.println("Veuillez saisir le montant à retirer");
         int amount = sc.nextInt();
         sc.nextLine();
 
-        customerService.update(account, amount);
+        BankAccount bankAccount = customerService.getAccount(accountId);
 
-
-
-        System.out.println("Somme à retirer :");
-    }
-
-    private static void withdrawal(){
-
+        customerService.updateBalance(bankAccount, amount, Status.WITHDRAWAL);
     }
 
     private static void history(){
+        System.out.println("Veuillez saisir votre numéro de compte");
+        int accountId = sc.nextInt();
+        sc.nextLine();
+
+        List<BankingTransaction> transactions = customerService.getAllTransactions(accountId);
+
+        for (BankingTransaction t : transactions ) {
+            System.out.println(t);
+        }
 
     }
 

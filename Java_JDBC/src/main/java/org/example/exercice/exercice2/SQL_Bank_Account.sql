@@ -37,12 +37,14 @@ INSERT INTO bank_account(balance,customer_id) VALUES
 
 INSERT INTO banking_transaction(amount,status,account_id) VALUES 
 (100, 'DEPOSIT', 2),
-(-200, 'WITHDRAWAL', 1),
+(200, 'WITHDRAWAL', 1),
 (100, 'DEPOSIT', 1),
-(-100, 'WITHDRAWAL', 1),
+(100, 'WITHDRAWAL', 1),
 (100, 'DEPOSIT', 1),
 (100, 'WITHDRAWAL', 1),
 (100, 'DEPOSIT', 1);
+
+DELETE FROM banking_transaction;
 
 SELECT account_number, balance FROM bank_account ba
 INNER JOIN customer cu ON cu.customer_id = ba.customer_id

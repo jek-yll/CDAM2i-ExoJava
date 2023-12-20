@@ -1,6 +1,7 @@
 package org.example.dao;
 
 import org.example.models.BankAccount;
+import org.example.models.Status;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -29,11 +30,21 @@ public class BankAccountDAO extends BaseDAO<BankAccount>{
         return nbRows == 1;
     }
 
-    @Override
-    public boolean update(BankAccount element) throws SQLException {
-        request = "UPDATE bank_account SET balance = ? WHERE id = ?;";
+
+    public boolean updateBalance(BankAccount element, int amount, Status status) throws SQLException {
+        request = "UPDATE bank_account SET balance = ? WHERE account_number = ?;";
         statement = _connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
-        statement.setInt(1, element.getBalance());
+
+        int newBalance = element.getBalance();
+
+        // TODO verification découvert
+        if (status == Status.DEPOSIT){
+            newBalance = newBalance + amount;
+        } else if(status == Status.WITHDRAWAL) {
+            newBalance = newBalance - amount;
+        }
+
+        statement.setInt(1, newBalance);
         statement.setInt(2, element.getAccountNumber());
         int nbRows = statement.executeUpdate();
         resultSet = statement.getGeneratedKeys();
@@ -41,9 +52,7 @@ public class BankAccountDAO extends BaseDAO<BankAccount>{
         if (resultSet.next()){
             element.setAccountNumber(resultSet.getInt(1));
         }
-
         return nbRows == 1;
-
     }
 
     @Override
@@ -73,5 +82,10 @@ public class BankAccountDAO extends BaseDAO<BankAccount>{
     @Override
     public List<BankAccount> get() throws SQLException {
         return null;
+    }
+
+    @Override
+    public boolean update(BankAccount element) throws SQLException {
+        return false;
     }
 }
