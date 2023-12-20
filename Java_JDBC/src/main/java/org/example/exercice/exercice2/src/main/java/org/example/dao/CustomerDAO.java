@@ -77,7 +77,7 @@ public class CustomerDAO extends BaseDAO<Customer>{
 
     public List<BankAccount> getAllAccount(int idCustomer) throws SQLException {
         List<BankAccount> result = new ArrayList<>();
-        request = "SELECT account_number, balance FROM bank_account ba " +
+        request = "SELECT account_number, balance, ba.customer_id FROM bank_account ba " +
                 "INNER JOIN customer cu ON cu.customer_id = ba.customer_id WHERE ba.customer_id = ?; ";
         statement = _connection.prepareStatement(request);
         statement.setInt(1, idCustomer);
@@ -87,6 +87,7 @@ public class CustomerDAO extends BaseDAO<Customer>{
             BankAccount account = new BankAccount();
             account.setAccountNumber(resultSet.getInt("account_number"));
             account.setBalance(resultSet.getInt("balance"));
+            account.setCustomerId(resultSet.getInt("customer_id"));
             result.add(account);
         }
         return result;

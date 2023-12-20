@@ -23,6 +23,7 @@ public class AccountIHM {
                 "2 - Depot",
                 "3 - Retrait",
                 "4 - Historique de compte",
+                "5 - Afficher mes comptes",
                 "0 - Fin"
         };
 
@@ -50,6 +51,11 @@ public class AccountIHM {
                 history();
                 menu();
             }
+            case 5 -> {
+                allAccount();
+                menu();
+            }
+
             case 0 -> {
             }
             default -> {
@@ -107,7 +113,18 @@ public class AccountIHM {
         for (BankingTransaction t : transactions ) {
             System.out.println(t);
         }
+    }
 
+    private static void allAccount(){
+        System.out.println("Saisir votre identifiant");
+        int customerId = sc.nextInt();
+        sc.nextLine();
+
+        List <BankAccount> accounts = customerService.getAllAccount(customerId);
+
+        for (BankAccount a : accounts ) {
+            System.out.println(a);
+        }
     }
 
 }
