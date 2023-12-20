@@ -5,12 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf484a23-aabf-46a0-a4b1-c4e3e130be7d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SQL_Bank_Account.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SQL_Bank_Account.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BankAccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BankAccountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BankingTransactionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BankingTransactionDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/BankingTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/BankingTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/services/CustomerService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/utils/AccountIHM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/AccountIHM.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +58,7 @@
       <workItem from="1702984241886" duration="599000" />
       <workItem from="1702985073063" duration="15833000" />
       <workItem from="1703056479390" duration="125000" />
-      <workItem from="1703056616200" duration="5542000" />
+      <workItem from="1703056616200" duration="5811000" />
     </task>
     <servers />
   </component>

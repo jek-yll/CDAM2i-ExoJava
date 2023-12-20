@@ -70,8 +70,6 @@ public class AccountIHM {
     }
 
     private static void deposit(){
-        //TODO: vérifier que le compte selectionné appartient au client
-
         System.out.println("Veuillez saisir votre numéro de compte");
         int accountId = sc.nextInt();
         sc.nextLine();
