@@ -33,7 +33,7 @@ public class BankAccountDAO extends BaseDAO<BankAccount>{
 
     public boolean updateBalance(BankAccount element, int amount, Status status) throws SQLException {
         request = "UPDATE bank_account SET balance = ? WHERE account_number = ?;";
-        statement = _connection.prepareStatement(request, Statement.RETURN_GENERATED_KEYS);
+        statement = _connection.prepareStatement(request);
 
         int newBalance = element.getBalance();
 
@@ -75,6 +75,11 @@ public class BankAccountDAO extends BaseDAO<BankAccount>{
     }
 
     @Override
+    public boolean update(BankAccount element) throws SQLException {
+        return false;
+    }
+
+    @Override
     public boolean delete(BankAccount element) throws SQLException {
         return false;
     }
@@ -82,10 +87,5 @@ public class BankAccountDAO extends BaseDAO<BankAccount>{
     @Override
     public List<BankAccount> get() throws SQLException {
         return null;
-    }
-
-    @Override
-    public boolean update(BankAccount element) throws SQLException {
-        return false;
     }
 }
