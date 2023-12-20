@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-@ToString
 @NoArgsConstructor
 public class BankingTransaction {
 
@@ -14,4 +13,12 @@ public class BankingTransaction {
     private Status status;
     private int account_id;
 
+    @Override
+    public String toString() {
+        return "BankingTransaction : " +
+                "transactionNumber=" + transactionNumber +
+                ", amount=" + amount +
+                ", status=" + status +
+                ", account_id=" + account_id;
+    }
 }

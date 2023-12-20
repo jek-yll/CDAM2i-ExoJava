@@ -7,7 +7,6 @@ import lombok.ToString;
 import java.util.List;
 
 @Data
-@ToString
 @NoArgsConstructor
 public class BankAccount {
 
@@ -16,5 +15,11 @@ public class BankAccount {
     private int customerId;
     private List<BankingTransaction> bankingTransactions;
 
-
+    @Override
+    public String toString() {
+        return "BankAccount : " +
+                "accountNumber=" + accountNumber +
+                ", balance=" + balance +
+                ", customerId=" + customerId;
+    }
 }
