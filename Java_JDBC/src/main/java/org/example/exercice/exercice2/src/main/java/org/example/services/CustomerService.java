@@ -57,6 +57,7 @@ public class CustomerService {
 
     public boolean updateBalance(BankAccount bankAccount, int amount, Status status){
         //TODO: vérifier que le compte selectionné appartient au client
+
         try {
             bankAccountDAO.updateBalance(bankAccount, amount, status);
         } catch (SQLException e) {

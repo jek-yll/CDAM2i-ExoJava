@@ -94,7 +94,6 @@ public class AccountIHM {
         } else if (status == Status.WITHDRAWAL) {
             customerService.updateBalance(bankAccount, amount, Status.WITHDRAWAL);
         }
-
     }
 
     private static void history(){
@@ -102,11 +101,15 @@ public class AccountIHM {
         int accountId = sc.nextInt();
         sc.nextLine();
 
+        BankAccount account = customerService.getAccount(accountId);
         List<BankingTransaction> transactions = customerService.getAllTransactions(accountId);
 
         for (BankingTransaction t : transactions ) {
             System.out.println(t);
         }
+
+        System.out.println("SOLDE DU COMPTE : " + account.getBalance());
+
     }
 
     private static void allAccount(){
