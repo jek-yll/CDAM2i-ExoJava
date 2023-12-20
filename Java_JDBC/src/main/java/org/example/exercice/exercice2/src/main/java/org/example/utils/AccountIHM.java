@@ -14,11 +14,8 @@ public class AccountIHM {
 
     private static final Scanner sc = new Scanner(System.in);
     private static final CustomerService customerService = new CustomerService();
-
-
     public static void menu(){
         String[] options = {
-                //TODO: Affichage compte / Ajouter un compte / Voir tous les comptes
                 "1 - Nouveau client et compte",
                 "2 - Depot",
                 "3 - Retrait",
@@ -107,9 +104,7 @@ public class AccountIHM {
         for (BankingTransaction t : transactions ) {
             System.out.println(t);
         }
-
         System.out.println("SOLDE DU COMPTE : " + account.getBalance());
-
     }
 
     private static void allAccount(){
@@ -118,10 +113,8 @@ public class AccountIHM {
         sc.nextLine();
 
         List <BankAccount> accounts = customerService.getAllAccount(customerId);
-
         for (BankAccount a : accounts ) {
             System.out.println(a);
         }
     }
-
 }
