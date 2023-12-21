@@ -40,12 +40,12 @@ public class EventDAO extends BaseDAO<Event>{
     public boolean update(Event element) throws SQLException {
         request = "UPDATE Event SET name = ?, date_time = ?, price = ?, event_location_id = ? WHERE id = ?";
         statement = _connection.prepareStatement(request);
-        statement.setString(1, element.getFirstName());
-        statement.setString(2, element.getLastName());
-        statement.setString(3, element.getLastName());
-        statement.setString(4, element.getLastName());
-        statement.setString(5, element.getLastName());
-        statement.setInt(3,element.getId());
+        statement.setString(1, element.getName());
+        // TODO date
+        //statement.setDate(2, element.getDateTime().toLocalTime());
+        statement.setDouble(3, element.getPrice());
+        statement.setInt(4, element.getEventLocation().getId());
+        statement.setInt(5, element.getLastName());
         int nbRows = statement.executeUpdate();
         return nbRows == 1;
     }
