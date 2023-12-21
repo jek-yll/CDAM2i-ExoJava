@@ -5,10 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf484a23-aabf-46a0-a4b1-c4e3e130be7d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../demos/demo_DAO2_JDBC/src/main/java/org/example/MultipleRows.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/Exception/CustomFormatException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/Exception/TicketSoldException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/dao/BaseDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/dao/CustomerDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/model/Event.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/model/EventLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/model/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../billetterie_JDBC/src/main/java/org/example/utils/DatabaseManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BankAccountDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BankAccountDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/BaseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/dao/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/dao/CustomerDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +48,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Administrateur/Desktop/CDA_LILLE_17_JUILLET",
+    "last_opened_file_path": "C:/Users/Administrateur/Desktop/CDA_LILLE_17_JUILLET/Java/JDBC/exercices/exercice_2_banque",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -61,7 +68,9 @@
       <workItem from="1702984241886" duration="599000" />
       <workItem from="1702985073063" duration="15833000" />
       <workItem from="1703056479390" duration="125000" />
-      <workItem from="1703056616200" duration="17157000" />
+      <workItem from="1703056616200" duration="21050000" />
+      <workItem from="1703144720363" duration="2104000" />
+      <workItem from="1703156953284" duration="28000" />
     </task>
     <servers />
   </component>
